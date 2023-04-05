@@ -1,0 +1,39 @@
+.container {
+    .heroes-form {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        mat-form-field {
+            width: 75%;
+        }
+    }
+
+    .spinner {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .no-heroes-found {
+        margin: 100px 0px;
+        display: flex;
+        justify-content: center;
+        h1 {
+            font-weight: bold;
+        }
+    }
+
+    .heroes-info {
+        .heroe {
+            margin-top: 10px;
+            cursor: pointer;
+            img {
+                background-size: cover;
+                max-width: 100%;
+            }
+            h2 {
+                font-weight: bold;
+            }
+        }
+    }
+}

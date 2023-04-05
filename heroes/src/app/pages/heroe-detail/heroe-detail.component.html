@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="spinner" *ngIf="loading">
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="col-10 detail" *ngIf="!loading">
+            <mat-card>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-md-6 image">
+                            <img [src]="characterDetail.character.thumbnail">
+                        </div>
+                        <div class="col-md-6">
+                            <mat-card-header>
+                                <mat-card-title>{{ characterDetail.character.name }}</mat-card-title>
+                                <mat-card-subtitle>{{ characterDetail.character.id }}</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-divider></mat-divider>
+                            <h3>{{ characterDetail.description == '' ? 'Sin descripcion.' : characterDetail.description }}</h3>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Comics: </th>
+                                    <td>{{ characterDetail.comics }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Events: </th>
+                                    <td>{{ characterDetail.events }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Series: </th>
+                                    <td>{{ characterDetail.series }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Stories: </th>
+                                    <td>{{ characterDetail.stories }}</td>
+                                </tr>
+                            </table>
+                            <div class="back-button">
+                                <button mat-raised-button color="warn"(click)="goBack()">< Atras</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

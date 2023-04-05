@@ -1,0 +1,10 @@
+$principal_color: #ec1d24;
+
+.mat-toolbar {
+    background-color: $principal_color;
+    display: flex;
+    justify-content: center;
+    .marvel-icon {
+        cursor: pointer;
+    }
+}
